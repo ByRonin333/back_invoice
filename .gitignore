@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d
 # Angular specific
 /dist/
 /out-tsc/
@@ -26,3 +30,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
+=======
+=======
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+>>>>>>> 81b02fc (Back_Invoice new)
+>>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d

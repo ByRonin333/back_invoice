@@ -1,14 +1,21 @@
 {
+<<<<<<< HEAD
    "name": "invoice-backend",
+=======
+   "name": "back-invoices",
+>>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "type": "commonjs",
    "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "@types/body-parser": "^1.19.6",
       "@types/express": "^5.0.6",
 =======
 >>>>>>> 2cf5dbd (primer commit)
+=======
+>>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d
       "@types/node": "^20.19.43",
       "ts-node": "^10.9.2",
       "typescript": "^5.9.3"
@@ -16,6 +23,10 @@
    "dependencies": {
       "body-parser": "^1.20.3",
       "express": "^4.21.2",
+<<<<<<< HEAD
+=======
+      "ng": "^0.0.0",
+>>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d
       "pg": "^8.23.1",
       "reflect-metadata": "^0.2.2",
       "typeorm": "1.1.2"
