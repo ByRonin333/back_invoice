@@ -4,19 +4,8 @@
          "es2023"
       ],
       "target": "es2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "module": "Node16",
-      "moduleResolution": "node16",
-      "rootDir": "./src",
-=======
       "module": "commonjs",
       "moduleResolution": "node",
->>>>>>> 2cf5dbd (primer commit)
-=======
-      "module": "commonjs",
-      "moduleResolution": "node",
->>>>>>> df04eb11453390f7cdbeb77e2e509ad61fafe31d
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
