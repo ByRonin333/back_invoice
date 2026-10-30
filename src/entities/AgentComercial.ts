@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
 import { IClient } from "./IClient";
-import { Transaccion } from "./Transaccion"
+import { Transaccio } from "./Transaccio"
 
 @Entity()
 export class AgentComercial implements IClient {
@@ -14,7 +14,7 @@ export class AgentComercial implements IClient {
     dni: String = ''
 
     @OneToMany(() => Transaccio,(transaccio=>transaccio.agentComercial))
-    transaccions: Transaccion[]
+    transaccions: Transaccio[]
 
 }
 
