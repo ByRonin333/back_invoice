@@ -4,8 +4,9 @@
          "es2023"
       ],
       "target": "es2022",
-      "module": "commonjs",
-      "moduleResolution": "node",
+      "module": "Node16",
+      "moduleResolution": "node16",
+      "rootDir": "./src",
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
