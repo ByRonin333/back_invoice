@@ -1,6 +1,7 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { UnitatMedida } from "./UnitatMedida";
 import { Producte } from "./Producte";
+import { Documentacio } from "./Documentacio";
 
 @Entity()
 export class Transaccio{
@@ -26,5 +27,7 @@ export class Transaccio{
     preuMedida: number = 0.0
     @ManyToOne(()=> Producte, (producte=> producte.transaccions))
     producte: Producte
+    @ManyToOne(()=>Documentacio,(documentacio => documentacio.transacciones))
+    document: Documentacio
     
 }
