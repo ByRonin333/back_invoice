@@ -2,6 +2,7 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { UnitatMedida } from "./UnitatMedida";
 import { Producte } from "./Producte";
 import { Documentacio } from "./Documentacio";
+import { AgentComercial } from "./AgentComercial";
 
 @Entity()
 export class Transaccio{
@@ -25,6 +26,8 @@ export class Transaccio{
     iva: number = 0
     @Column()
     preuMedida: number = 0.0
+    @ManyToOne(()=>AgentComercial,(agentComercial=>agentComercial.transaccions))
+    agentComercial: AgentComercial
     @ManyToOne(()=> Producte, (producte=> producte.transaccions))
     producte: Producte
     @ManyToOne(()=>Documentacio,(documentacio => documentacio.transaccions))

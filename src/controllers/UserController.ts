@@ -1,10 +1,10 @@
 import { AppDataSource } from "../data-source"
 import { NextFunction, Request, Response } from "express"
-import { User } from "../entities/AgentComercial"
+import { AgentComercial } from "../entities/AgentComercial"
 
 export class UserController {
 
-    private userRepository = AppDataSource.getRepository(User)
+    private userRepository = AppDataSource.getRepository(AgentComercial)
 
     async all(request: Request, response: Response, next: NextFunction) {
         return this.userRepository.find()
@@ -27,7 +27,7 @@ export class UserController {
     async save(request: Request, response: Response, next: NextFunction) {
         const { firstName, lastName, age } = request.body;
 
-        const user = Object.assign(new User(), {
+        const user = Object.assign(new AgentComercial(), {
             firstName,
             lastName,
             age
@@ -37,7 +37,7 @@ export class UserController {
     }
 
     async remove(request: Request, response: Response, next: NextFunction) {
-        const id = parseInt(request.params.id)
+        const id = parseInt(String(request.params.id))
 
         let userToRemove = await this.userRepository.findOneBy({ id })
 
