@@ -13,8 +13,8 @@ export class AgentComercial implements IClient {
     @Column()
     dni: String = ''
 
-    @OneToMany(() => Transaccion,(transaccion=>transaccion.agentComercial))
-    transacciones: Transaccion[]
+    @OneToMany(() => Transaccio,(transaccio=>transaccio.agentComercial))
+    transaccions: Transaccion[]
 
 }
 
