@@ -4,7 +4,8 @@ import { Producte } from "./Producte";
 
 @Entity()
 export class Distribucio{
-   
+    @PrimaryGeneratedColumn()
+    id: number = 0
     @Column()
     lote: string = ''
     @Column()
