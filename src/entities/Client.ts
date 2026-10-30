@@ -8,5 +8,5 @@ export class Client extends AgentComercial {
     idClient: number = 0
 
     @OneToMany(() => LocalClient,(local => local.client))
-    locales: LocalClient[]
+    locals: LocalClient[]
 }

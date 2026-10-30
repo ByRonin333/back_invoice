@@ -12,6 +12,6 @@ export class LocalClient {
     @Column()
     horari: Date = new Date
 
-    @ManyToOne(() => Client,(client => client.locales))
+    @ManyToOne(() => Client,(client => client.locals))
     client: Client;
 }

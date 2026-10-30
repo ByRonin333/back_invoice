@@ -27,7 +27,7 @@ export class Transaccio{
     preuMedida: number = 0.0
     @ManyToOne(()=> Producte, (producte=> producte.transaccions))
     producte: Producte
-    @ManyToOne(()=>Documentacio,(documentacio => documentacio.transacciones))
+    @ManyToOne(()=>Documentacio,(documentacio => documentacio.transaccions))
     document: Documentacio
     
 }

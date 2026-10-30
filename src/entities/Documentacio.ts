@@ -1,8 +1,8 @@
 import { Entity, OneToMany } from "typeorm"
-import { Transaccion } from "./Transaccion"
+import { Transaccio } from "./Transaccio"
 
 @Entity()
 export class Documentacio {
-    @OneToMany(() => Transaccion,(transaccion=>transaccion.document))
-    transacciones: Transaccion[]
+    @OneToMany(() => Transaccio,(transaccio=>transaccio.document))
+    transaccions: Transaccio[]
 }
