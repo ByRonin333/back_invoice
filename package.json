@@ -4,15 +4,17 @@
    "description": "Awesome project developed with TypeORM.",
    "type": "commonjs",
    "devDependencies": {
+      "@types/body-parser": "^1.19.6",
+      "@types/express": "^5.0.6",
       "@types/node": "^20.19.43",
       "ts-node": "^10.9.2",
       "typescript": "^5.9.3"
    },
    "dependencies": {
-      "reflect-metadata": "^0.2.2",
-      "typeorm": "1.1.2",
+      "body-parser": "^1.20.3",
       "express": "^4.21.2",
-      "body-parser": "^1.20.3"
+      "reflect-metadata": "^0.2.2",
+      "typeorm": "1.1.2"
    },
    "scripts": {
       "start": "ts-node src/index.ts",
