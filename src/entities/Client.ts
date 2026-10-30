@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
 import { AgentComercial } from "./AgentComercial";
 import { LocalClient } from "./LocalClient";
 
