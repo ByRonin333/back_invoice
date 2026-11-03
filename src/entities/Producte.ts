@@ -1,6 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Distribucio } from "./Distribucio";
-import { Almacen } from "./Almacen";
 import { Transaccio } from "./Transaccio";
 
 @Entity()
