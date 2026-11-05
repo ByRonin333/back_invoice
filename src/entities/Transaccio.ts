@@ -3,6 +3,7 @@ import { UnitatMedida } from "./UnitatMedida";
 import { Producte } from "./Producte";
 import { Documentacio } from "./Documentacio";
 import { AgentComercial } from "./AgentComercial";
+import { Iva } from "./Iva";
 
 @Entity()
 export class Transaccio{
@@ -23,7 +24,7 @@ export class Transaccio{
     @Column()
     mesura: string = ''
     @Column()
-    iva: number = 0
+    iva: Iva | undefined
     @Column()
     preuMedida: number = 0.0
     @ManyToOne(()=>AgentComercial,(agentComercial=>agentComercial.transaccions))
