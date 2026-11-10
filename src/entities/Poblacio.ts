@@ -15,9 +15,9 @@ export class Poblacio {
     @Column()
         numero: number = 0
 
-    @OneToMany(() => AgentComercial,(agentscomercial => agentscomercial.poblacio))
-    agentsComercials: AgentComercial[]
+    @OneToMany(() => AgentComercial, (agentscomercial => agentscomercial.poblacio))
+    agentsComercials: AgentComercial[] = [];
 
     @ManyToOne(() => Provincia, (provincia => provincia.poblacions))
-    provincia: Provincia
+    provincia: Provincia = new Provincia;
 }

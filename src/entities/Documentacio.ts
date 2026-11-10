@@ -6,6 +6,6 @@ export class Documentacio {
     @PrimaryGeneratedColumn()
         idDocumentacio: number = 0
     
-    @OneToMany(() => Transaccio,(transaccio=>transaccio.document))
-    transaccions: Transaccio[]
+    @OneToMany(() => Transaccio, (transaccio => transaccio.document))
+    transaccions: Transaccio[] = []
 }

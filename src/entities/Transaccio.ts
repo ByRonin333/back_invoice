@@ -37,13 +37,13 @@ export class Transaccio{
     @Column()
         preuMedida: number = 0.0
 
-    @ManyToOne(()=>AgentComercial,(agentComercial=>agentComercial.transaccions))
-    agentComercial: AgentComercial
+    @ManyToOne(() => AgentComercial, (agentComercial => agentComercial.transaccions))
+    agentComercial: AgentComercial = new AgentComercial;
 
-    @ManyToOne(()=> Producte, (producte=> producte.transaccions))
-    producte: Producte
+    @ManyToOne(() => Producte, (producte => producte.transaccions))
+    producte: Producte = new Producte;
 
-    @ManyToOne(()=>Documentacio,(documentacio => documentacio.transaccions))
-    document: Documentacio
+    @ManyToOne(() => Documentacio, (documentacio => documentacio.transaccions))
+    document: Documentacio = new Documentacio;
     
 }

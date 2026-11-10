@@ -11,9 +11,9 @@ export class Distribucio{
     @Column()
         quantitat: number = 0
 
-    @ManyToOne(()=> Almacen, (almacen=> almacen.distribucions))
-    almacen: Almacen;
+    @ManyToOne(() => Almacen, (almacen => almacen.distribucions))
+    almacen: Almacen = new Almacen;
 
-    @ManyToOne(()=> Producte, (producte=> producte.distribucions))
-    producte: Producte
+    @ManyToOne(() => Producte, (producte => producte.distribucions))
+    producte: Producte = new Producte;
 }

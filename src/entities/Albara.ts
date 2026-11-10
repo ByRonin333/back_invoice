@@ -6,5 +6,5 @@ import { Factura } from "./Factura";
 @Entity()
 export class Albara extends Documentacio {
     @ManyToOne(()=>Factura,(factura=>factura.albarans))
-    factura: Factura
+    factura: Factura = new Factura;
 }

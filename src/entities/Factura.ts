@@ -7,7 +7,7 @@ import { Albara } from "./Albara";
 export class Factura extends Documentacio {
     
 
-    @OneToMany(()=>Albara,(albara=>albara.factura))
-    albarans: Albara[]
+    @OneToMany(() => Albara, (albara => albara.factura))
+    albarans: Albara[] = [];
 }
     

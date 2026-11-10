@@ -9,5 +9,5 @@ export class Pais {
         nomPais: String = ''
 
     @OneToMany(() => Provincia, (provincia => provincia.pais))
-    provincies: Provincia[]
+    provincies: Provincia[] = [];
 }

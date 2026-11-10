@@ -25,10 +25,10 @@ export class AgentComercial implements IClient {
     @Column()
         calle: string = ''
 
-    @OneToMany(() => Transaccio,(transaccio=>transaccio.agentComercial))
-    transaccions: Transaccio[]
+    @OneToMany(() => Transaccio, (transaccio => transaccio.agentComercial))
+    transaccions: Transaccio[] = [];
 
-    @ManyToOne(() => Poblacio,(poblacion => poblacion.agentsComercials))
-    poblacio: Poblacio
+    @ManyToOne(() => Poblacio, (poblacion => poblacion.agentsComercials))
+    poblacio: Poblacio = new Poblacio;
 }
 

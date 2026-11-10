@@ -12,9 +12,9 @@ export class Producte{
     @Column()
         nomProducte: String = ''
     
-    @OneToMany(()=> Distribucio, (distribucio => distribucio.producte.distribucions))
-    distribucions: Distribucio[]
+    @OneToMany(() => Distribucio, (distribucio => distribucio.producte.distribucions))
+    distribucions: Distribucio[] = [];
 
-    @OneToMany(()=> Transaccio, (transaccio=> transaccio.producte))
-    transaccions: Transaccio[]
+    @OneToMany(() => Transaccio, (transaccio => transaccio.producte))
+    transaccions: Transaccio[] = [];
 }
