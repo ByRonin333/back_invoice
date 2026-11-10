@@ -8,29 +8,41 @@ import { Iva } from "./Iva";
 @Entity()
 export class Transaccio{
     @PrimaryGeneratedColumn()
-    id: number = 0
+        idTransaccio: number = 0
+
     @Column()
-    data: Date = new Date()
+        data: Date = new Date()
+
     @Column()
-    preuUnitat: number = 0.0
+        preuUnitat: number = 0.0
+
     @Column()
-    unitats: number = 0
+        unitats: number = 0
+
     @Column()
-    unitatMedida: UnitatMedida | undefined
+        unitatMedida: UnitatMedida | undefined
+
     @Column()
-    quantitat: number = 0.0
+        quantitat: number = 0.0
+
     @Column()
-    lot: string = ''
+        lot: string = ''
+
     @Column()
-    mesura: string = ''
+        mesura: string = ''
+
     @Column()
-    iva: Iva | undefined
+        iva: Iva | undefined
+
     @Column()
-    preuMedida: number = 0.0
+        preuMedida: number = 0.0
+
     @ManyToOne(()=>AgentComercial,(agentComercial=>agentComercial.transaccions))
     agentComercial: AgentComercial
+
     @ManyToOne(()=> Producte, (producte=> producte.transaccions))
     producte: Producte
+
     @ManyToOne(()=>Documentacio,(documentacio => documentacio.transaccions))
     document: Documentacio
     

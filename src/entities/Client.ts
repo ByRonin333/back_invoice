@@ -5,7 +5,7 @@ import { LocalClient } from "./LocalClient";
 @Entity()
 export class Client extends AgentComercial {
     @PrimaryGeneratedColumn()
-    idClient: number = 0
+        idClient: number = 0
 
     @OneToMany(() => LocalClient,(local => local.client))
     locals: LocalClient[]

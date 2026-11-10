@@ -1,4 +1,4 @@
 export interface IClient {
     id: number
-    dni: String
+    nif_dni: String
 }

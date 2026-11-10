@@ -5,13 +5,15 @@ import { Producte } from "./Producte";
 @Entity()
 export class Distribucio{
     @PrimaryGeneratedColumn()
-    id: number = 0
+        codiDistribucio: String = ''
     @Column()
-    lote: string = ''
+        idLot: String = ''
     @Column()
-    cantidad: string = ''
+        quantitat: number = 0
+
     @ManyToOne(()=> Almacen, (almacen=> almacen.distribucions))
     almacen: Almacen;
+
     @ManyToOne(()=> Producte, (producte=> producte.distribucions))
     producte: Producte
 }

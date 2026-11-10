@@ -5,11 +5,16 @@ import { Transaccio } from "./Transaccio";
 @Entity()
 export class Producte{
     @PrimaryGeneratedColumn()
-    id: number = 0
+        idProducte: number = 0
     @Column()
-    stock: number = 0
+        stock: number = 0
+    
+    @Column()
+        nomProducte: String = ''
+    
     @OneToMany(()=> Distribucio, (distribucio => distribucio.producte.distribucions))
     distribucions: Distribucio[]
+
     @OneToMany(()=> Transaccio, (transaccio=> transaccio.producte))
     transaccions: Transaccio[]
 }

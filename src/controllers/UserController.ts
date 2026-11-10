@@ -27,13 +27,18 @@ export class UserController {
     async save(request: Request, response: Response, next: NextFunction) {
         const { firstName, lastName, age } = request.body;
 
-        const user = Object.assign(new AgentComercial(), {
+        var user = Object.assign(new AgentComercial(), {
             firstName,
             lastName,
             age
         })
-
-        return this.userRepository.save(user)
+        try {
+            user = await this.userRepository.save(user);
+            return user;
+        } catch(e) {
+            return e;
+        }
+        
     }
 
     async remove(request: Request, response: Response, next: NextFunction) {

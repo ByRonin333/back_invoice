@@ -4,7 +4,7 @@ import { Transaccio } from "./Transaccio"
 @Entity()
 export class Documentacio {
     @PrimaryGeneratedColumn()
-    id: number = 0
+        idDocumentacio: number = 0
     
     @OneToMany(() => Transaccio,(transaccio=>transaccio.document))
     transaccions: Transaccio[]

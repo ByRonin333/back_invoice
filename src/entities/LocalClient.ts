@@ -4,13 +4,13 @@ import { Client } from "./Client";
 @Entity()
 export class LocalClient {
     @PrimaryGeneratedColumn()
-    idLocalClient: number = 0;
+        idLocalClient: number = 0;
 
     @Column()
-    ubicacio: String = ''
+        ubicacio: String = ''
 
     @Column()
-    horari: Date = new Date
+        horari: Date = new Date
 
     @ManyToOne(() => Client,(client => client.locals))
     client: Client;

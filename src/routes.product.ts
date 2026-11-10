@@ -1,23 +1,34 @@
 import { ProductController } from "./controllers/ProductController"
 
-export const RouteProduct = [{
+export const RouteProduct = [
+{
     method: "get",
     route: "/productes",
     controller: ProductController,
     action: "all"
-}, {
+}, 
+{
     method: "get",
     route: "/productes/:id",
     controller: ProductController,
     action: "one"
-}, {
+}, 
+{
+    method: "get",
+    route: "/productes/mayor/:stock",
+    controller: ProductController,
+    action: "produtesMayorStockQue"
+}, 
+{
     method: "post",
     route: "/productes",
     controller: ProductController,
     action: "save"
-}, {
+}, 
+{
     method: "delete",
     route: "/productes/:id",
     controller: ProductController,
     action: "remove"
-}]
+}
+]

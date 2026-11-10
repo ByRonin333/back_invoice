@@ -4,5 +4,5 @@ import { AgentComercial } from "./AgentComercial";
 @Entity()
 export class Proveidor extends AgentComercial {
     @PrimaryGeneratedColumn()
-    idProveidor: number = 0
+        idProveidor: number = 0
 }
